@@ -15,6 +15,7 @@
 .navbar-wrapper
 {
     width: 100%;
+    z-index: 1000;
     position: fixed;
     top: 0;
     display: flex;
@@ -252,14 +253,18 @@ li p
 }
 
 /*Responsive*/
-@media screen and (max-width:600px)
+@media screen and (max-width:640px)
 {
     .navbar-wrapper
     {
         flex-direction: column;
-        justify-content: space-around;
+        align-items: center;
         padding: 20px;
         height: auto;
+    }
+    .logo
+    {
+        margin: 0 130px 0 auto;
     }
     .navbar-wrapper h4
     {
@@ -267,9 +272,13 @@ li p
         margin-top: 10px;
         margin-bottom: 14px;
     }
-    .navbar-wrapper .nav-link a
+    .nav-links-wrapper
     {
-        margin-right: 25px;
+        margin-right: 80px;
+    }
+    .nav-link a
+    {
+        margin-right:5px;
         font-size: 12px;
         font-weight: 600;
         color: #000000;
@@ -343,11 +352,13 @@ li p
     }
     .info-header
     {
+        font-size: 10px;
         text-align: center;
-        margin: 40px 0;
+        margin: 40px 15px 40px 0;
     }
     .info-cards
     {
+        width: 50%;
         display: flex;
         flex-direction: column;
         padding: 50px;
